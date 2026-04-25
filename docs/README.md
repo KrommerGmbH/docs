@@ -303,7 +303,7 @@ flowchart LR
 
 - 기능 변경 시 [feature-catalog-62.md](feature-catalog-62.md) 또는 해당 카테고리 문서를 같이 업데이트합니다.
 - 새로 찾은 기능은 먼저 [feature-discovery-worklog.md](feature-discovery-worklog.md)에 기록한 뒤 카테고리 문서로 옮깁니다.
-- 테스트는 [tests](../tests) 루트만 사용합니다 (`src/renderer/tests/**` 재도입 금지).
+- 테스트는 `tests/` 루트만 사용합니다 (`src/renderer/tests/**` 재도입 금지).
 
 ---
 
