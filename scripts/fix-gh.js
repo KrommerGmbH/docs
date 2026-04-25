@@ -1,0 +1,1 @@
+﻿const fs = require("fs"); let c = fs.readFileSync("src/engine/server/routes/chat-generate.route.ts", "utf-8"); c = c.replace("sdkModel = gh.chat(effectiveModelId)", "sdkModel = gh.chat(effectiveModelId.split(\"/\").pop() || effectiveModelId)"); fs.writeFileSync("src/engine/server/routes/chat-generate.route.ts", c);

@@ -1,0 +1,1 @@
+﻿import fs from "fs"; let c = fs.readFileSync("src/engine/server/routes/chat-generate.route.ts", "utf-8"); c = c.replace(/aiModel = provider\.chat\(resolvedModelId\)/g, "aiModel = provider.chat(resolvedModelId.split(\"/\").pop() || resolvedModelId)"); fs.writeFileSync("src/engine/server/routes/chat-generate.route.ts", c);

@@ -1,0 +1,1 @@
+﻿import fs from "fs"; const path = "src/engine/server/routes/chat-generate.route.ts"; let c = fs.readFileSync(path, "utf-8"); c = c.replace(/return input\r?\n  }/g, "return input.includes(\"/\") ? input.split(\"/\").slice(1).join(\"/\") || input : input\n  }"); fs.writeFileSync(path, c);

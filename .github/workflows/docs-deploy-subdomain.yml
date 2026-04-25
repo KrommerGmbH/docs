@@ -1,0 +1,52 @@
+name: Deploy docs to subdomain
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'docs/**'
+      - 'package.json'
+      - 'pnpm-lock.yaml'
+      - '.github/workflows/docs-deploy-subdomain.yml'
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build VitePress docs
+        run: pnpm docs:build
+
+      - name: Prepare SSH key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.DOCS_DEPLOY_SSH_KEY }}" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -H ${{ secrets.DOCS_DEPLOY_HOST }} >> ~/.ssh/known_hosts
+
+      - name: Deploy to server
+        env:
+          DEPLOY_HOST: ${{ secrets.DOCS_DEPLOY_HOST }}
+          DEPLOY_PORT: ${{ secrets.DOCS_DEPLOY_PORT }}
+          DEPLOY_USER: ${{ secrets.DOCS_DEPLOY_USER }}
+          DEPLOY_PATH: ${{ secrets.DOCS_DEPLOY_PATH }}
+        run: |
+          rsync -az --delete -e "ssh -p ${DEPLOY_PORT:-22}" docs/.vitepress/dist/ "${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}"
