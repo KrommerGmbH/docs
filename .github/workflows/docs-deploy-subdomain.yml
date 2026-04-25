@@ -40,24 +40,28 @@ jobs:
           mkdir -p ~/.ssh
           chmod 700 ~/.ssh
 
-          # Support 3 formats:
-          # 1) Real multiline private key
-          # 2) Single-line key with literal "\n"
-          # 3) Base64-encoded private key
-          KEY_RAW="$(printf '%s' "${{ secrets.DOCS_DEPLOY_SSH_KEY }}" | tr -d '\r')"
-          printf '%s' "$KEY_RAW" | perl -pe 's/\\n/\n/g' > ~/.ssh/id_deploy
-          chmod 600 ~/.ssh/id_deploy
+          # Preferred: DOCS_DEPLOY_SSH_KEY_B64 (base64 of private key file, single line)
+          # Fallback: DOCS_DEPLOY_SSH_KEY (multiline / escaped / base64)
+          if [ -n "${{ secrets.DOCS_DEPLOY_SSH_KEY_B64 }}" ]; then
+            printf '%s' "${{ secrets.DOCS_DEPLOY_SSH_KEY_B64 }}" | tr -d '\r\n ' | base64 -d > ~/.ssh/id_deploy 2>/dev/null || {
+              echo "Invalid DOCS_DEPLOY_SSH_KEY_B64";
+              exit 1;
+            }
+          else
+            KEY_RAW="$(printf '%s' "${{ secrets.DOCS_DEPLOY_SSH_KEY }}" | tr -d '\r')"
+            printf '%s' "$KEY_RAW" | perl -pe 's/\\n/\n/g' > ~/.ssh/id_deploy
 
-          # Validate key; if invalid, try base64 decode fallback
-          if ! ssh-keygen -y -f ~/.ssh/id_deploy > /dev/null 2>&1; then
-            if printf '%s' "$KEY_RAW" | base64 -d > ~/.ssh/id_deploy 2>/dev/null; then
-              chmod 600 ~/.ssh/id_deploy
+            if ! ssh-keygen -y -f ~/.ssh/id_deploy > /dev/null 2>&1; then
+              if printf '%s' "$KEY_RAW" | base64 -d > ~/.ssh/id_deploy 2>/dev/null; then
+                :
+              fi
             fi
           fi
 
-          # Final validation (fail-fast with clear reason)
+          chmod 600 ~/.ssh/id_deploy
+
           ssh-keygen -y -f ~/.ssh/id_deploy > /dev/null 2>&1 || {
-            echo "Invalid DOCS_DEPLOY_SSH_KEY format. Use OpenSSH private key (or base64 of it).";
+            echo "Invalid SSH private key. Use OpenSSH private key. (Recommended: set DOCS_DEPLOY_SSH_KEY_B64)";
             exit 1;
           }
 
