@@ -35,6 +35,16 @@ jobs:
       - name: Build VitePress docs
         run: pnpm docs:build
 
+      - name: Validate deploy secrets
+        env:
+          DEPLOY_HOST: ${{ secrets.DOCS_DEPLOY_HOST }}
+          DEPLOY_USER: ${{ secrets.DOCS_DEPLOY_USER }}
+          DEPLOY_PATH: ${{ secrets.DOCS_DEPLOY_PATH }}
+        run: |
+          [ -n "$DEPLOY_HOST" ] || { echo "Missing DOCS_DEPLOY_HOST"; exit 1; }
+          [ -n "$DEPLOY_USER" ] || { echo "Missing DOCS_DEPLOY_USER"; exit 1; }
+          [ -n "$DEPLOY_PATH" ] || { echo "Missing DOCS_DEPLOY_PATH"; exit 1; }
+
       - name: Prepare SSH key
         run: |
           mkdir -p ~/.ssh
