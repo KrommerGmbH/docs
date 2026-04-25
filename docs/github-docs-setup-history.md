@@ -103,6 +103,40 @@
 - [ ] `KrommerGmbH/docs-internal` 생성/권한 검증
 - [ ] internal 전용 배포 워크플로/시크릿 별도 구성
 
+## 10) 저장소 오염 정리 및 복구 상태 (2026-04-26 추가)
+
+### 10.1 확인된 문제
+
+- 기존 `KrommerGmbH/cmh-chatbot` 저장소가 현재 `KrommerGmbH/docs`로 리다이렉트되는 상태 확인
+- 그 결과 `cmh-chatbot` URL로 push 시 실제로 `docs` 저장소 정책(Secret Scanning, Push Protection)이 적용됨
+- `docs` 저장소에 코드가 섞였던 이력은 정리 커밋으로 제거 완료
+
+### 10.2 이번 세션에서 수행한 조치
+
+1. `docs` 저장소에서 소스코드/테스트 파일 대량 삭제 커밋 반영
+2. VitePress dead link 임시 허용(`ignoreDeadLinks`) 반영
+3. 로컬 원격 정리:
+    - 현재 작업본(`cmh-chatbot` 폴더)의 `origin`을 `docs`로 고정
+    - 혼동 유발 원격 alias 제거
+4. 코드 복구 준비:
+    - 코드 포함 커밋 지점(`b61e4dc`)을 `rescue/cmh-chatbot-code`로 백업
+    - push protection 이력 충돌을 피하기 위해 단일 초기 커밋(clean history) 브랜치 생성
+      - 브랜치: `publish/cmh-chatbot-clean`
+      - 커밋: `0e82f92`
+
+### 10.3 최종 분리 목표(유지)
+
+- Public 문서: `KrommerGmbH/docs`
+- Private 문서: `KrommerGmbH/docs-internal` (신규 생성 필요)
+- 소스코드: `KrommerGmbH/cmh-chatbot` (신규 생성/복구 필요)
+
+### 10.4 남은 즉시 작업
+
+- [ ] GitHub Organization에서 `cmh-chatbot` 저장소 신규 생성
+- [ ] GitHub Organization에서 `docs-internal` 저장소 신규 생성
+- [ ] `publish/cmh-chatbot-clean` 브랜치를 신규 `cmh-chatbot` 저장소 `master`로 push
+- [ ] `docs-internal`에 private 문서 초기 구조 및 배포 워크플로 분리 반영
+
 ---
 
 작성일: 2026-04-26
