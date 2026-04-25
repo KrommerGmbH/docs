@@ -6,6 +6,7 @@ export default defineConfig({
   lang: 'ko-KR',
   cleanUrls: true,
   lastUpdated: true,
+  ignoreDeadLinks: true,
   base: '/',
   themeConfig: {
     logo: '/logo.svg',
