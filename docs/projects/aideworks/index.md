@@ -2,7 +2,7 @@
 
 ## 프로젝트 요약
 
-- 타입: Electron + Vue 3 + Shopware Admin 패턴
+- 타입: Electron + Vue 3 + Admin 패턴
 - 핵심: Module/Plugin 기반 업무 지원 플랫폼
 
 ## 업로드된 문서(초급자 우선)

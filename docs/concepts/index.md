@@ -4,10 +4,10 @@
 
 ## CMH Chatbot
 
-- [기능 그룹 개요](../README.md)
-- [Architecture & Support](../feature-category-architecture-support.md)
-- [AI Runtime](../feature-category-ai-runtime.md)
-- [Workflow/Admin](../feature-category-workflow-admin.md)
+- [기능 그룹 개요](../projects/cmh-chatbot/ko/core/README.md)
+- [Architecture & Support](../projects/cmh-chatbot/ko/core/feature-category-architecture-support.md)
+- [AI Runtime](../projects/cmh-chatbot/ko/core/feature-category-ai-runtime.md)
+- [Workflow/Admin](../projects/cmh-chatbot/ko/core/feature-category-workflow-admin.md)
 
 ## 학습 포인트
 

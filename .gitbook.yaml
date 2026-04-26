@@ -1,0 +1,15 @@
+redirects:
+  # cmh-chatbot 언어 구조 전환 (core/advanced/operations -> ko/*)
+  projects/cmh-chatbot/core/README.md: projects/cmh-chatbot/ko/core/README.md
+  projects/cmh-chatbot/core/developer-handbook.md: projects/cmh-chatbot/ko/core/developer-handbook.md
+  projects/cmh-chatbot/core/feature-catalog-62.md: projects/cmh-chatbot/ko/core/feature-catalog-62.md
+  projects/cmh-chatbot/core/feature-discovery-worklog.md: projects/cmh-chatbot/ko/core/feature-discovery-worklog.md
+  projects/cmh-chatbot/core/feature-category-chat-experience.md: projects/cmh-chatbot/ko/core/feature-category-chat-experience.md
+  projects/cmh-chatbot/core/feature-category-ai-runtime.md: projects/cmh-chatbot/ko/core/feature-category-ai-runtime.md
+  projects/cmh-chatbot/core/feature-category-workflow-admin.md: projects/cmh-chatbot/ko/core/feature-category-workflow-admin.md
+  projects/cmh-chatbot/core/feature-category-ops-security.md: projects/cmh-chatbot/ko/core/feature-category-ops-security.md
+  projects/cmh-chatbot/core/feature-category-architecture-support.md: projects/cmh-chatbot/ko/core/feature-category-architecture-support.md
+  projects/cmh-chatbot/advanced/feature-driven-developer-guide.md: projects/cmh-chatbot/ko/advanced/feature-driven-developer-guide.md
+  projects/cmh-chatbot/advanced/langchain-langgraph-catalog.md: projects/cmh-chatbot/ko/advanced/langchain-langgraph-catalog.md
+  projects/cmh-chatbot/advanced/librechat-integration-review.md: projects/cmh-chatbot/ko/advanced/librechat-integration-review.md
+  projects/cmh-chatbot/operations/github-docs-setup-history.md: projects/cmh-chatbot/ko/operations/github-docs-setup-history.md

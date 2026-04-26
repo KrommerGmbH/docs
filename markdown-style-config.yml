@@ -1,0 +1,33 @@
+default: false
+
+# 최소 도입 규칙 세트 (문서 품질/가독성 중심)
+MD001: true # heading increment
+MD003: true # heading style consistency
+MD009: true # trailing spaces
+MD011: true # reversed link syntax
+MD012: true # multiple consecutive blank lines
+MD018: true # no space after hash
+MD019: true # multiple spaces after hash
+MD022: true # headings surrounded by blank lines
+MD023: true # headings at beginning of line
+MD024:
+  allow_different_nesting: true
+MD025:
+  front_matter_title: ""
+MD027: true # blockquote spacing
+MD029:
+  style: ordered
+MD030: true # list marker spacing
+MD031: true # fenced code block surrounded by blank lines
+MD032: true # lists surrounded by blank lines
+MD034: true # no bare url
+MD037: true # no space in emphasis markers
+MD038: true # no space in code span
+MD039: true # no space in links
+MD040: true # fenced code language required
+MD041: true # first line H1
+MD042: true # no empty links
+MD045: true # image alt text
+MD047: true # file ends with single newline
+MD048:
+  style: backtick

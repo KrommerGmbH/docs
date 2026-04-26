@@ -13,7 +13,7 @@
 1. [문서 홈](./index.md)
 2. [Projects](./projects/index.md)
 3. [CMH Chatbot 인덱스](./projects/cmh-chatbot/index.md)
-4. [기능 그룹 인덱스](./README.md)
+4. [기능 그룹 인덱스](./projects/cmh-chatbot/ko/core/README.md)
 5. [가이드/참조](./guides/index.md), [references/index.md](./references/index.md)
 
 ## 3. 작성 규칙

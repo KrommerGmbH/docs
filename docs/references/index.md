@@ -4,13 +4,13 @@
 
 ## Core References
 
-- [Feature Catalog 62](../feature-catalog-62.md)
-- [Feature Discovery Worklog](../feature-discovery-worklog.md)
-- [LangChain/LangGraph Catalog](../langchain-langgraph-catalog.md)
-- [GitHub 문서 운영 이력](../github-docs-setup-history.md)
+- [Feature Catalog 62](../projects/cmh-chatbot/ko/core/feature-catalog-62.md)
+- [Feature Discovery Worklog](../projects/cmh-chatbot/ko/core/feature-discovery-worklog.md)
+- [LangChain/LangGraph Catalog](../projects/cmh-chatbot/ko/advanced/langchain-langgraph-catalog.md)
+- [GitHub 문서 운영 이력](../projects/cmh-chatbot/ko/operations/github-docs-setup-history.md)
 
 ## Category References
 
-- [Chat Experience](../feature-category-chat-experience.md)
-- [Ops/Security](../feature-category-ops-security.md)
-- [Architecture/Support](../feature-category-architecture-support.md)
+- [Chat Experience](../projects/cmh-chatbot/ko/core/feature-category-chat-experience.md)
+- [Ops/Security](../projects/cmh-chatbot/ko/core/feature-category-ops-security.md)
+- [Architecture/Support](../projects/cmh-chatbot/ko/core/feature-category-architecture-support.md)

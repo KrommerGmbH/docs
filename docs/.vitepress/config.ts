@@ -28,7 +28,7 @@ export default defineConfig({
         ],
       },
       {
-        text: 'Shopware 스타일 구조',
+        text: '문서 구조',
         items: [
           { text: 'Products', link: '/products/' },
           { text: 'Concepts', link: '/concepts/' },
@@ -48,28 +48,28 @@ export default defineConfig({
       {
         text: 'CMH Chatbot 핵심 문서',
         items: [
-          { text: 'README (목차+인덱스)', link: '/README' },
-          { text: 'Developer Handbook', link: '/developer-handbook' },
-          { text: 'Feature Catalog 62', link: '/feature-catalog-62' },
-          { text: 'Feature Discovery Worklog', link: '/feature-discovery-worklog' },
+          { text: 'README (목차+인덱스)', link: '/projects/cmh-chatbot/ko/core/README' },
+          { text: 'Developer Handbook', link: '/projects/cmh-chatbot/ko/core/developer-handbook' },
+          { text: 'Feature Catalog 62', link: '/projects/cmh-chatbot/ko/core/feature-catalog-62' },
+          { text: 'Feature Discovery Worklog', link: '/projects/cmh-chatbot/ko/core/feature-discovery-worklog' },
         ],
       },
       {
         text: '기능 그룹 카테고리',
         items: [
-          { text: 'Chat Experience', link: '/feature-category-chat-experience' },
-          { text: 'AI Runtime', link: '/feature-category-ai-runtime' },
-          { text: 'Workflow/Admin', link: '/feature-category-workflow-admin' },
-          { text: 'Ops/Security', link: '/feature-category-ops-security' },
-          { text: 'Architecture/Support', link: '/feature-category-architecture-support' },
+          { text: 'Chat Experience', link: '/projects/cmh-chatbot/ko/core/feature-category-chat-experience' },
+          { text: 'AI Runtime', link: '/projects/cmh-chatbot/ko/core/feature-category-ai-runtime' },
+          { text: 'Workflow/Admin', link: '/projects/cmh-chatbot/ko/core/feature-category-workflow-admin' },
+          { text: 'Ops/Security', link: '/projects/cmh-chatbot/ko/core/feature-category-ops-security' },
+          { text: 'Architecture/Support', link: '/projects/cmh-chatbot/ko/core/feature-category-architecture-support' },
         ],
       },
       {
         text: '심화',
         items: [
-          { text: 'Feature Driven Guide', link: '/feature-driven-developer-guide' },
-          { text: 'LangChain/LangGraph Catalog', link: '/langchain-langgraph-catalog' },
-          { text: 'LibreChat Integration Review', link: '/librechat-integration-review' },
+          { text: 'Feature Driven Guide', link: '/projects/cmh-chatbot/ko/advanced/feature-driven-developer-guide' },
+          { text: 'LangChain/LangGraph Catalog', link: '/projects/cmh-chatbot/ko/advanced/langchain-langgraph-catalog' },
+          { text: 'LibreChat Integration Review', link: '/projects/cmh-chatbot/ko/advanced/librechat-integration-review' },
         ],
       },
     ],

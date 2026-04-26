@@ -1,8 +1,8 @@
 # CMH Developer Docs
 
-Shopware 문서 운영 방식처럼 **GitHub 문서 → VitePress 빌드 → 서브도메인 배포**를 목표로 만든 개발자 문서 포털입니다.
+표준 문서 포털 운영 방식으로 **GitHub 문서 → VitePress 빌드 → 서브도메인 배포**를 목표로 만든 개발자 문서 포털입니다.
 
-## 문서 구조 (Shopware 스타일)
+## 문서 구조 (표준 구조)
 
 - [Products](./products/index.md): 프로젝트별 문서 허브
 - [Concepts](./concepts/index.md): 아키텍처/동작 원리
@@ -11,10 +11,10 @@ Shopware 문서 운영 방식처럼 **GitHub 문서 → VitePress 빌드 → 서
 
 ## 빠른 링크
 
-- [CMH Chatbot 문서 인덱스](./README.md)
-- [Developer Handbook](./developer-handbook.md)
-- [Feature Catalog 62](./feature-catalog-62.md)
-- [Feature Discovery Worklog](./feature-discovery-worklog.md)
+- [CMH Chatbot 문서 인덱스](./projects/cmh-chatbot/ko/core/README.md)
+- [Developer Handbook](./projects/cmh-chatbot/ko/core/developer-handbook.md)
+- [Feature Catalog 62](./projects/cmh-chatbot/ko/core/feature-catalog-62.md)
+- [Feature Discovery Worklog](./projects/cmh-chatbot/ko/core/feature-discovery-worklog.md)
 - [Public 문서 온보딩](./public-docs-onboarding.md)
 - [Private 문서 온보딩](./private-docs-onboarding.md)
 
@@ -29,7 +29,7 @@ Shopware 문서 운영 방식처럼 **GitHub 문서 → VitePress 빌드 → 서
 
 기존 구조의 강점인 **기능 그룹 + 다이어그램 + trigger 기반 설명**은 그대로 유지합니다.
 
-- 기능 그룹 인덱스: [README](./README.md)
+- 기능 그룹 인덱스: [README](./projects/cmh-chatbot/ko/core/README.md)
 - 카테고리 문서: Chat/AI Runtime/Workflow/Ops/Architecture
 
 ## 로컬 실행

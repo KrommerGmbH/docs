@@ -1,6 +1,6 @@
 # Products
 
-Shopware 문서 스타일의 Product 진입점입니다.
+프로젝트 문서 포털의 Product 진입점입니다.
 
 ## Public 프로젝트 목록
 

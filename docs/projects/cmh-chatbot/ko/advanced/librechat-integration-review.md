@@ -20,7 +20,7 @@
 |---|-------|---------------|------------|-----------------|----------|
 | 1 | 멀티에이전트 계층 구조 | ✅ 완전 가능 | 🟢 쉬움 | 98% 호환 | LibreChat 기본 확장 포인트 사용 |
 | 2 | 사용자 심리분석 에이전트 / SAD 점수 | ✅ 완전 가능 | 🟡 보통 | 95% 호환 | Message Hook 확장 포인트 사용 |
-| 3 | Shopware / AideWorks 네이티브 연동 | ✅ 완전 가능 | 🟡 보통 | 90% 호환 | Plugin System 으로 구현 |
+| 3 | 외부 Admin / AideWorks 네이티브 연동 | ✅ 완전 가능 | 🟡 보통 | 90% 호환 | Plugin System 으로 구현 |
 | 4 | BullMQ 작업 큐 시스템 | ✅ 완전 가능 | 🟢 쉬움 | 100% 호환 | LibreChat 내부 이미 사용중 |
 | 5 | 서킷 브레이커 / 회복 패턴 | ✅ 완전 가능 | 🟢 쉬움 | 100% 호환 | 기존 미들웨어 레이어 확장 |
 | 6 | 워크플로우 그래프 에디터 | ⚠️ 부분 가능 | 🟠 어려움 | 60% 호환 | Frontend 전면 재구성 필요 |
@@ -59,15 +59,15 @@
 
 ---
 
-### 3. Shopware / AideWorks 네이티브 연동
+### 3. 외부 Admin / AideWorks 네이티브 연동
 
 | 항목 | 내용 |
 |------|------|
 | ✅ 구현 가능 여부 | **완전 가능** |
-| 🎯 구현 방법 | LibreChat Plugin System 으로 별도 플러그인 구현. `Tool Provider` 인터페이스를 구현해서 Shopware API를 Tool 로 노출. Admin SDK 는 Frontend Plugin 으로 별도 등록 |
+| 🎯 구현 방법 | LibreChat Plugin System 으로 별도 플러그인 구현. `Tool Provider` 인터페이스를 구현해서 외부 Admin API를 Tool 로 노출. Admin SDK 는 Frontend Plugin 으로 별도 등록 |
 | 📊 난이도 | 🟡 보통 |
 | 🔗 LibreChat 호환성 | 90% |
-| 📌 제약 사항 | Shopware Admin 세션과 LibreChat 세션 동기화 로직 별도 구현 필요 |
+| 📌 제약 사항 | 외부 Admin 세션과 LibreChat 세션 동기화 로직 별도 구현 필요 |
 | 📄 근거 링크 | https://github.com/danny-avila/LibreChat/blob/main/api/server/plugins/ |
 
 ---
@@ -142,7 +142,7 @@
 | 항목 | 내용 |
 |------|------|
 | ✅ 구현 가능 여부 | **완전 가능** |
-| 🎯 구현 방법 | LibreChat 의 Prisma 클라이언트 위에 Shopware 스타일 Criteria 빌더를 Wrapping 레이어로 구현. 기존 모든 쿼리 로직 호환 유지 |
+| 🎯 구현 방법 | LibreChat 의 Prisma 클라이언트 위에 Criteria 빌더 Wrapping 레이어를 구현. 기존 모든 쿼리 로직 호환 유지 |
 | 📊 난이도 | 🟡 보통 |
 | 🔗 LibreChat 호환성 | 90% |
 | 📌 제약 사항 | 트랜잭션 처리 로직 별도 검증 필요 |
@@ -175,7 +175,7 @@
 ### ⚠️ 주의 사항
 
 1. **워크플로우 그래프 에디터만 유일하게 호환성이 낮음**: Vue → React 로 마이그레이션이 필수적이며 Frontend 코드는 전면 재작성 필요
-2. Shopware / AideWorks 연동시 세션 동기화는 별도의 구현이 필요함
+2. 외부 Admin / AideWorks 연동시 세션 동기화는 별도의 구현이 필요함
 3. 분산 에이전트 허브의 노드 디스커버리 로직은 커스텀 구현 필요
 
 ### 🔍 최종 결론
@@ -196,7 +196,7 @@
 4. 심리분석 에이전트 Hook 등록
 5. BullMQ / Cron / 서킷 브레이커 설정
 6. DAL / Criteria 빌더 구현
-7. Shopware 플러그인 개발
+7. 외부 Admin 플러그인 개발
 8. 분산 에이전트 허브 구현
 9. React Flow 기반 워크플로우 에디터 재구현
 

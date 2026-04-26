@@ -12,7 +12,7 @@
 3) 바로 아래 파일 링크를 눌러 코드로 이동합니다.
 
 추가 운영 문서:
-- [GitHub 개발자 문서 운영 작업 이력](github-docs-setup-history.md)
+- [GitHub 개발자 문서 운영 작업 이력](../operations/github-docs-setup-history.md)
 
 ---
 
@@ -287,9 +287,9 @@ flowchart LR
 - Architecture/Support: [feature-category-architecture-support.md](feature-category-architecture-support.md)
 
 ### 2.3 심화 참고
-- [feature-driven-developer-guide.md](feature-driven-developer-guide.md)
-- [langchain-langgraph-catalog.md](langchain-langgraph-catalog.md)
-- [librechat-integration-review.md](librechat-integration-review.md)
+- [feature-driven-developer-guide.md](../advanced/feature-driven-developer-guide.md)
+- [langchain-langgraph-catalog.md](../advanced/langchain-langgraph-catalog.md)
+- [librechat-integration-review.md](../advanced/librechat-integration-review.md)
 
 ---
 
