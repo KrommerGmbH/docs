@@ -1,21 +1,24 @@
 # 프로젝트 문서 인덱스
 
-현재 포털은 **단일 저장소 시작 전략(A)** 으로 구성되어 있습니다.
+Shopware 스타일의 Product 허브 형태로 프로젝트 문서를 모아서 제공합니다.
 
-## 포함 프로젝트
+## Public 프로젝트 목록
 
 - [CMH Chatbot](./cmh-chatbot/index.md)
+- [AideWorks](./aideworks/index.md)
+- [CMH Web Agent](./cmh-web-agent/index.md)
+- [CMH Exchange Rate](./cmh-exchange-rate/index.md)
+- [CMH Omni Scraper](./cmh-omni-scraper/index.md)
 
-## 다음 확장 계획
+## 초급자 권장 순서
 
-동일 방식으로 아래 프로젝트 문서를 추가할 수 있습니다.
+1. 프로젝트 허브 문서
+2. quickstart 문서
+3. 기능 그룹/다이어그램 문서
+4. references 문서
 
-- AideWorks
-- CMH Web Agent
-- CMH Exchange Rate
+## 운영 규칙
 
-추가 시 규칙:
-
-- 문서 파일은 각 프로젝트 저장소 `docs/`에서 관리
-- 포털 사이드바와 상단 메뉴에 프로젝트 섹션 추가
-- 배포는 동일 파이프라인(`pnpm docs:build`) 유지
+- Public에는 공개 가능한 문서만 반영
+- Private 내용은 `docs-internal` 저장소로 분리
+- 링크 깨짐 방지: 업로드된 문서 기준으로만 링크

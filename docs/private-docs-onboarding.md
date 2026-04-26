@@ -1,0 +1,34 @@
+# Private Docs 온보딩 (초급자용)
+
+이 문서는 내부 전용 문서 운영 기준을 설명합니다.
+
+## 1. Private 문서의 목적
+
+- 운영/보안/내부 정책/내부 아키텍처 기록
+- 팀 내부 지식 베이스
+- 공개하면 안 되는 정보의 안전한 보관
+
+## 2. 저장소/도메인 분리
+
+- Public: `KrommerGmbH/docs` → `docs.my-mik.de`
+- Private: `KrommerGmbH/docs-internal` → `docs-internal.my-mik.de`
+
+## 3. Private 문서에 포함 가능한 내용
+
+- 내부 운영 절차(runbook)
+- 인프라 구조도, 내부 장애 이력
+- 보안 설정 체크리스트
+- 내부 연락/승인 플로우
+
+## 4. 절대 금지
+
+- API Key, Secret, 비밀번호 원문 기록
+- Public 저장소로 private 문서 복사
+- 민감한 내부 링크를 public 문서에 직접 노출
+
+## 5. 기본 운영 절차
+
+1. 내부 문서는 `docs-internal`에서 작성
+2. 배포 전 민감정보 스캔
+3. private 도메인 인증(로그인/IP 제한) 상태 확인
+4. 배포 후 접근 제어 재검증

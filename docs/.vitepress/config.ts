@@ -12,21 +12,43 @@ export default defineConfig({
     logo: '/logo.svg',
     nav: [
       { text: '홈', link: '/' },
-      { text: 'CMH Chatbot', link: '/projects/cmh-chatbot/' },
-      { text: '기능 카탈로그', link: '/feature-catalog-62' },
-      { text: '작업 로그', link: '/feature-discovery-worklog' },
+      { text: 'Products', link: '/products/' },
+      { text: 'Concepts', link: '/concepts/' },
+      { text: 'Guides', link: '/guides/' },
+      { text: 'References', link: '/references/' },
+      { text: 'Projects', link: '/projects/' },
     ],
     sidebar: [
       {
         text: '시작',
         items: [
           { text: '문서 홈', link: '/' },
-          { text: '프로젝트 인덱스', link: '/projects/' },
-          { text: 'CMH Chatbot 인덱스', link: '/projects/cmh-chatbot/' },
+          { text: 'Public 문서 온보딩', link: '/public-docs-onboarding' },
+          { text: 'Private 문서 온보딩', link: '/private-docs-onboarding' },
         ],
       },
       {
-        text: '핵심 문서',
+        text: 'Shopware 스타일 구조',
+        items: [
+          { text: 'Products', link: '/products/' },
+          { text: 'Concepts', link: '/concepts/' },
+          { text: 'Guides', link: '/guides/' },
+          { text: 'References', link: '/references/' },
+        ],
+      },
+      {
+        text: '프로젝트 (VPSidebar)',
+        items: [
+          { text: '프로젝트 인덱스', link: '/projects/' },
+          { text: 'CMH Chatbot', link: '/projects/cmh-chatbot/' },
+          { text: 'AideWorks', link: '/projects/aideworks/' },
+          { text: 'CMH Web Agent', link: '/projects/cmh-web-agent/' },
+          { text: 'CMH Exchange Rate', link: '/projects/cmh-exchange-rate/' },
+          { text: 'CMH Omni Scraper', link: '/projects/cmh-omni-scraper/' },
+        ],
+      },
+      {
+        text: 'CMH Chatbot 핵심 문서',
         items: [
           { text: 'README (목차+인덱스)', link: '/README' },
           { text: 'Developer Handbook', link: '/developer-handbook' },
@@ -35,7 +57,7 @@ export default defineConfig({
         ],
       },
       {
-        text: '카테고리 상세',
+        text: '기능 그룹 카테고리',
         items: [
           { text: 'Chat Experience', link: '/feature-category-chat-experience' },
           { text: 'AI Runtime', link: '/feature-category-ai-runtime' },
