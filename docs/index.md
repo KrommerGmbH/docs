@@ -23,9 +23,7 @@ Shopware 문서 운영 방식처럼 **GitHub 문서 → VitePress 빌드 → 서
 - [프로젝트 인덱스](./projects/index.md)
 - [CMH Chatbot](./projects/cmh-chatbot/index.md)
 - [AideWorks](./projects/aideworks/index.md)
-- [CMH Web Agent](./projects/cmh-web-agent/index.md)
 - [CMH Exchange Rate](./projects/cmh-exchange-rate/index.md)
-- [CMH Omni Scraper](./projects/cmh-omni-scraper/index.md)
 
 ## 기존 강점 유지
 

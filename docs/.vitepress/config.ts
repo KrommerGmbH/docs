@@ -42,9 +42,7 @@ export default defineConfig({
           { text: '프로젝트 인덱스', link: '/projects/' },
           { text: 'CMH Chatbot', link: '/projects/cmh-chatbot/' },
           { text: 'AideWorks', link: '/projects/aideworks/' },
-          { text: 'CMH Web Agent', link: '/projects/cmh-web-agent/' },
           { text: 'CMH Exchange Rate', link: '/projects/cmh-exchange-rate/' },
-          { text: 'CMH Omni Scraper', link: '/projects/cmh-omni-scraper/' },
         ],
       },
       {
@@ -75,7 +73,7 @@ export default defineConfig({
         ],
       },
     ],
-    socialLinks: [{ icon: 'github', link: 'https://github.com/KrommerGmbH/cmh-chatbot' }],
+    socialLinks: [{ icon: 'github', link: 'https://github.com/KrommerGmbH/docs' }],
     search: {
       provider: 'local',
     },

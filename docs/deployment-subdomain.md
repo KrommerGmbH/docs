@@ -60,7 +60,6 @@ server {
 확장 시 권장:
 
 - `docs/projects/aideworks/index.md`
-- `docs/projects/cmh-web-agent/index.md`
 - `docs/projects/cmh-exchange-rate/index.md`
 
 그리고 `docs/.vitepress/config.ts`의 `nav`/`sidebar`에 프로젝트 항목만 추가.

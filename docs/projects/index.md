@@ -6,9 +6,7 @@ Shopware 스타일의 Product 허브 형태로 프로젝트 문서를 모아서 
 
 - [CMH Chatbot](./cmh-chatbot/index.md)
 - [AideWorks](./aideworks/index.md)
-- [CMH Web Agent](./cmh-web-agent/index.md)
 - [CMH Exchange Rate](./cmh-exchange-rate/index.md)
-- [CMH Omni Scraper](./cmh-omni-scraper/index.md)
 
 ## 초급자 권장 순서
 
