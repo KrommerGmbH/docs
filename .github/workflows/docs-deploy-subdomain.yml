@@ -39,11 +39,9 @@ jobs:
         env:
           DEPLOY_HOST: ${{ secrets.DOCS_DEPLOY_HOST }}
           DEPLOY_USER: ${{ secrets.DOCS_DEPLOY_USER }}
-          DEPLOY_PATH: ${{ secrets.DOCS_DEPLOY_PATH }}
         run: |
           [ -n "$DEPLOY_HOST" ] || { echo "Missing DOCS_DEPLOY_HOST"; exit 1; }
           [ -n "$DEPLOY_USER" ] || { echo "Missing DOCS_DEPLOY_USER"; exit 1; }
-          [ -n "$DEPLOY_PATH" ] || { echo "Missing DOCS_DEPLOY_PATH"; exit 1; }
 
       - name: Prepare SSH key
         run: |
@@ -82,6 +80,6 @@ jobs:
           DEPLOY_HOST: ${{ secrets.DOCS_DEPLOY_HOST }}
           DEPLOY_PORT: ${{ secrets.DOCS_DEPLOY_PORT }}
           DEPLOY_USER: ${{ secrets.DOCS_DEPLOY_USER }}
-          DEPLOY_PATH: ${{ secrets.DOCS_DEPLOY_PATH }}
+          DEPLOY_PATH: /var/www/vhosts/my-mik.de/cmh-chatbot.my-mik.de
         run: |
           rsync -az --delete -e "ssh -i ~/.ssh/id_deploy -o IdentitiesOnly=yes -p ${DEPLOY_PORT:-22}" docs/.vitepress/dist/ "${DEPLOY_USER}@${DEPLOY_HOST}:${DEPLOY_PATH}"

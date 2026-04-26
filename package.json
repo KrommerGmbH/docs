@@ -52,6 +52,8 @@
     "docs:dev": "vitepress dev docs --host 0.0.0.0 --port 4173",
     "docs:build": "vitepress build docs",
     "docs:preview": "vitepress preview docs --host 0.0.0.0 --port 4174",
+    "docs:deploy:local": "powershell -NoProfile -ExecutionPolicy Bypass -File ./scripts/docs-auto-deploy.ps1 -RunOnce",
+    "docs:watch:deploy": "powershell -NoProfile -ExecutionPolicy Bypass -File ./scripts/docs-auto-deploy.ps1",
     "lint": "eslint src/",
     "prepublishOnly": "pnpm build"
   },
