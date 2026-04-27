@@ -16,3 +16,8 @@ models/
 
 # SQLite data
 data/*.sqlite
+
+# Lint result files (local temporary)
+lint-*.txt
+lint-result*.txt
+fix_markdown_style*.py

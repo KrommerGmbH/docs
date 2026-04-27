@@ -1,6 +1,6 @@
 ---
 nav:
-  title: 카테고리: Ops / Security / Reliability
+  title: "카테고리: Ops / Security / Reliability"
   position: 180
 
 ---

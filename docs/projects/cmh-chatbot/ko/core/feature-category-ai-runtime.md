@@ -1,6 +1,6 @@
 ---
 nav:
-  title: 카테고리: AI Runtime & Orchestration
+  title: "카테고리: AI Runtime & Orchestration"
   position: 160
 
 ---

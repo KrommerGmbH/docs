@@ -1,6 +1,6 @@
 ---
 nav:
-  title: 카테고리: Architecture & Support Code
+  title: "카테고리: Architecture & Support Code"
   position: 190
 
 ---

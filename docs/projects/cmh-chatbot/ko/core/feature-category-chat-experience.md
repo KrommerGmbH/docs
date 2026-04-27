@@ -1,6 +1,6 @@
 ---
 nav:
-  title: 카테고리: Chat Experience
+  title: "카테고리: Chat Experience"
   position: 150
 
 ---

@@ -1,6 +1,6 @@
 ---
 nav:
-  title: 카테고리: Workflow & Admin Tools
+  title: "카테고리: Workflow & Admin Tools"
   position: 170
 
 ---
