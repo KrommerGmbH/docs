@@ -1,4 +1,17 @@
+---
+nav:
+  title: LibreChat 기반 cmh-chatbot 기술 검수 보고서
+  position: 230
+
+---
+
 # LibreChat 기반 cmh-chatbot 기술 검수 보고서
+
+==================================
+
+==================================
+
+==================================
 
 > 검수 일시: 2026-04-21  
 > 검수 대상: cmh-chatbot v4.0  
@@ -8,6 +21,12 @@
 
 ## 🔍 검수 개요
 
+-------
+
+-------
+
+-------
+
 요청하신 10개 기능에 대해 **LibreChat 아키텍처 위에서의 구현 가능 여부**, **구현 방법**, **예상 난이도**, **기술적 제약 사항**을 검수했습니다.
 
 모든 분석은 실제 LibreChat 소스 코드와 문서, 그리고 cmh-chatbot 현재 구현 상태를 바탕으로 작성되었습니다.
@@ -15,6 +34,12 @@
 ---
 
 ## 📊 기능 별 검수 결과
+
+------------
+
+------------
+
+------------
 
 | # | 기능명 | 구현 가능 여부 | 예상 난이도 | LibreChat 호환성 | 주요 비고 |
 |---|-------|---------------|------------|-----------------|----------|
@@ -33,7 +58,19 @@
 
 ## 📋 각 기능 상세 검수
 
+------------
+
+------------
+
+------------
+
 ### 1. 멀티에이전트 계층 구조 (Supervisor/Manager/Worker 노드)
+
+----------------------------------------------
+
+----------------------------------------------
+
+----------------------------------------------
 
 | 항목 | 내용 |
 |------|------|
@@ -42,11 +79,17 @@
 | 📊 난이도 | 🟢 매우 쉬움 |
 | 🔗 LibreChat 호환성 | 98% |
 | 📌 제약 사항 | 없음. LibreChat 아키텍처가 처음부터 다중 에이전트 계층 구조를 지원하도록 설계됨 |
-| 📄 근거 링크 | https://github.com/danny-avila/LibreChat/blob/main/api/server/agents/ |
+| 📄 근거 링크 | [🔗 GitHub 링크](https://github.com/danny-avila/LibreChat/blob/main/api/server/agents/) |
 
 ---
 
 ### 2. 사용자 심리분석 에이전트 / SAD 점수 시스템
+
+-----------------------------
+
+-----------------------------
+
+-----------------------------
 
 | 항목 | 내용 |
 |------|------|
@@ -55,11 +98,17 @@
 | 📊 난이도 | 🟡 보통 |
 | 🔗 LibreChat 호환성 | 95% |
 | 📌 제약 사항 | 메시지 지연 발생하지 않도록 반드시 백그라운드 큐로 분리해야 함 |
-| 📄 근거 링크 | https://github.com/danny-avila/LibreChat/blob/main/api/server/middleware/hooks/ |
+| 📄 근거 링크 | [🔗 GitHub 링크](https://github.com/danny-avila/LibreChat/blob/main/api/server/middleware/hooks/) |
 
 ---
 
 ### 3. 외부 Admin / AideWorks 네이티브 연동
+
+-------------------------------
+
+-------------------------------
+
+-------------------------------
 
 | 항목 | 내용 |
 |------|------|
@@ -68,11 +117,17 @@
 | 📊 난이도 | 🟡 보통 |
 | 🔗 LibreChat 호환성 | 90% |
 | 📌 제약 사항 | 외부 Admin 세션과 LibreChat 세션 동기화 로직 별도 구현 필요 |
-| 📄 근거 링크 | https://github.com/danny-avila/LibreChat/blob/main/api/server/plugins/ |
+| 📄 근거 링크 | [🔗 GitHub 링크](https://github.com/danny-avila/LibreChat/blob/main/api/server/plugins/) |
 
 ---
 
 ### 4. 작업 큐 시스템 (BullMQ 기반 백그라운드 작업)
+
+--------------------------------
+
+--------------------------------
+
+--------------------------------
 
 | 항목 | 내용 |
 |------|------|
@@ -81,11 +136,17 @@
 | 📊 난이도 | 🟢 매우 쉬움 |
 | 🔗 LibreChat 호환성 | 100% |
 | 📌 제약 사항 | 없음 |
-| 📄 근거 링크 | https://github.com/danny-avila/LibreChat/blob/main/api/server/queue/ |
+| 📄 근거 링크 | [🔗 GitHub 링크](https://github.com/danny-avila/LibreChat/blob/main/api/server/queue/) |
 
 ---
 
 ### 5. 서킷 브레이커 / 회복 패턴
+
+------------------
+
+------------------
+
+------------------
 
 | 항목 | 내용 |
 |------|------|
@@ -94,11 +155,17 @@
 | 📊 난이도 | 🟢 쉬움 |
 | 🔗 LibreChat 호환성 | 100% |
 | 📌 제약 사항 | 없음 |
-| 📄 근거 링크 | https://github.com/danny-avila/LibreChat/blob/main/api/server/middleware/errorHandler.ts |
+| 📄 근거 링크 | [🔗 GitHub 링크](https://github.com/danny-avila/LibreChat/blob/main/api/server/middleware/errorHandler.ts) |
 
 ---
 
 ### 6. 워크플로우 그래프 에디터
+
+----------------
+
+----------------
+
+----------------
 
 | 항목 | 내용 |
 |------|------|
@@ -107,11 +174,17 @@
 | 📊 난이도 | 🟠 어려움 |
 | 🔗 LibreChat 호환성 | 60% |
 | 📌 제약 사항 | Frontend 전면 재작성 필요. 기존 cmh-chatbot Vue 컴포넌트는 전혀 호환되지 않음 |
-| 📄 근거 링크 | https://github.com/danny-avila/LibreChat/blob/main/client/src/ |
+| 📄 근거 링크 | [🔗 GitHub 링크](https://github.com/danny-avila/LibreChat/blob/main/client/src/) |
 
 ---
 
 ### 7. 분산 에이전트 허브
+
+-------------
+
+-------------
+
+-------------
 
 | 항목 | 내용 |
 |------|------|
@@ -120,11 +193,17 @@
 | 📊 난이도 | 🟡 보통 |
 | 🔗 LibreChat 호환성 | 85% |
 | 📌 제약 사항 | 노드 상태 동기화 로직 별도 구현 필요 |
-| 📄 근거 링크 | https://github.com/danny-avila/LibreChat/blob/main/api/server/agents/transports/ |
+| 📄 근거 링크 | [🔗 GitHub 링크](https://github.com/danny-avila/LibreChat/blob/main/api/server/agents/transports/) |
 
 ---
 
 ### 8. LangChain / LangGraph 네이티브 통합
+
+--------------------------------
+
+--------------------------------
+
+--------------------------------
 
 | 항목 | 내용 |
 |------|------|
@@ -133,11 +212,17 @@
 | 📊 난이도 | 🟢 매우 쉬움 |
 | 🔗 LibreChat 호환성 | 100% |
 | 📌 제약 사항 | 없음 |
-| 📄 근거 링크 | https://github.com/danny-avila/LibreChat/releases/tag/v0.7.0 |
+| 📄 근거 링크 | [🔗 GitHub 링크](https://github.com/danny-avila/LibreChat/releases/tag/v0.7.0) |
 
 ---
 
 ### 9. DAL / Criteria 빌더 시스템
+
+------------------------
+
+------------------------
+
+------------------------
 
 | 항목 | 내용 |
 |------|------|
@@ -146,11 +231,17 @@
 | 📊 난이도 | 🟡 보통 |
 | 🔗 LibreChat 호환성 | 90% |
 | 📌 제약 사항 | 트랜잭션 처리 로직 별도 검증 필요 |
-| 📄 근거 링크 | https://github.com/danny-avila/LibreChat/blob/main/api/server/database/ |
+| 📄 근거 링크 | [🔗 GitHub 링크](https://github.com/danny-avila/LibreChat/blob/main/api/server/database/) |
 
 ---
 
 ### 10. Scheduled Task / CronJob
+
+----------------------------
+
+----------------------------
+
+----------------------------
 
 | 항목 | 내용 |
 |------|------|
@@ -159,13 +250,25 @@
 | 📊 난이도 | 🟢 매우 쉬움 |
 | 🔗 LibreChat 호환성 | 100% |
 | 📌 제약 사항 | 없음 |
-| 📄 근거 링크 | https://github.com/danny-avila/LibreChat/blob/main/api/server/jobs/ |
+| 📄 근거 링크 | [🔗 GitHub 링크](https://github.com/danny-avila/LibreChat/blob/main/api/server/jobs/) |
 
 ---
 
 ## 📌 종합 검수 의견
 
+----------
+
+----------
+
+----------
+
 ### ✅ 긍정적 평가
+
+--------
+
+--------
+
+--------
 
 1. **9개 기능은 90% 이상 호환되며 대부분 별도의 변경 없이 그대로 구현 가능**
 2. LangChain / LangGraph, BullMQ, Cron, 서킷 브레이커 등 핵심 인프라는 LibreChat 에 이미 내장되어 있음
@@ -174,11 +277,23 @@
 
 ### ⚠️ 주의 사항
 
+--------
+
+--------
+
+--------
+
 1. **워크플로우 그래프 에디터만 유일하게 호환성이 낮음**: Vue → React 로 마이그레이션이 필수적이며 Frontend 코드는 전면 재작성 필요
 2. 외부 Admin / AideWorks 연동시 세션 동기화는 별도의 구현이 필요함
 3. 분산 에이전트 허브의 노드 디스커버리 로직은 커스텀 구현 필요
 
 ### 🔍 최종 결론
+
+-------
+
+-------
+
+-------
 
 > **LibreChat 위에 cmh-chatbot 모든 기능을 구현하는 것이 기술적으로 완전히 가능합니다.**
 >
@@ -189,6 +304,12 @@
 ---
 
 ## 🚀 추천 구현 순서
+
+----------
+
+----------
+
+----------
 
 1. LibreChat 기본 설치 및 플러그인 구조 확인
 2. LangGraph 통합 검증

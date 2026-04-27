@@ -1,34 +1,83 @@
+---
+nav:
+  title: Leitfaden für Entwicklerdokumentation (DE)
+  position: 630
+
+---
+
 # Leitfaden für Entwicklerdokumentation (DE)
 
+==========================================
+
+==========================================
+
+==========================================
+
 ## 1) Ziel (Overview)
+
+------------------
+
+------------------
+
+------------------
 
 Dieser Leitfaden definiert einen einheitlichen Stil für CMH-Entwicklerdokumente, damit **auch Junior-Entwickler die Schritte direkt nachvollziehen können**.
 
 Kombiniert werden:
 
 - strukturierte Doku-Abschnitte (Overview, Prerequisites, Configuration, Example, Events)
-- praxisnahe Abschnitte (Funktion, Trigger, Diagramm, Schrittfolge, Checkliste)
+   - praxisnahe Abschnitte (Funktion, Trigger, Diagramm, Schrittfolge, Checkliste)
 
 ## 2) Analysierte Stilquellen
 
+--------------------------
+
+--------------------------
+
+--------------------------
+
 - Leitfäden mit Erweiterungsüberblick
-- konzeptorientierte Basisleitfäden
-- event-/webhook-zentrierte Leitfäden
-- Leitfäden mit Komponenten-Property-/Event-Tabellen
+   - konzeptorientierte Basisleitfäden
+   - event-/webhook-zentrierte Leitfäden
+   - Leitfäden mit Komponenten-Property-/Event-Tabellen
 
 ## 3) Pflichtstruktur eines Dokuments
 
+----------------------------------
+
+----------------------------------
+
+----------------------------------
+
 ## Overview
 
+--------
+
+--------
+
+--------
+
 - Problem in 2–4 Zeilen
-- Zielgruppe (Niveau)
+   - Zielgruppe (Niveau)
 
 ## Prerequisites
 
+-------------
+
+-------------
+
+-------------
+
 - notwendiges Vorwissen
-- notwendige Umgebung/Version
+   - notwendige Umgebung/Version
 
 ## At a glance
+
+-----------
+
+-----------
+
+-----------
 
 | Punkt | Inhalt |
 |---|---|
@@ -40,27 +89,51 @@ Kombiniert werden:
 
 ## Trigger & Flow
 
+--------------
+
+--------------
+
+--------------
+
 - Trigger erklären
-- mindestens ein Mermaid-Diagramm
+   - mindestens ein Mermaid-Diagramm
 
 ```mermaid
 flowchart LR
 A[Trigger] --> B[Service]
 B --> C[Ergebnis]
-```
+```text
 
 ## Example
 
+-------
+
+-------
+
+-------
+
 - minimales lauffähiges Beispiel
-- bevorzugt kurz und direkt nutzbar
+   - bevorzugt kurz und direkt nutzbar
 
 ## Events / Properties / API
+
+-------------------------
+
+-------------------------
+
+-------------------------
 
 | Event/Property | Beschreibung |
 |---|---|
 | `onSomething` | Ereignisbeschreibung |
 
 ## Schritt-für-Schritt
+
+-------------------
+
+-------------------
+
+-------------------
 
 1. Vorbereitung
 2. Konfiguration
@@ -69,21 +142,45 @@ B --> C[Ergebnis]
 
 ## Troubleshooting
 
+---------------
+
+---------------
+
+---------------
+
 - mindestens 3 häufige Fehler
-- jeweils Ursache + Lösung
+   - jeweils Ursache + Lösung
 
 ## Checkliste
 
+----------
+
+----------
+
+----------
+
 - [ ] Keine toten Links
-- [ ] Beispielcode ist ausführbar
-- [ ] Keine Secrets/private Daten
-- [ ] Begriffe für Einsteiger erklärt
+   - [ ] Beispielcode ist ausführbar
+   - [ ] Keine Secrets/private Daten
+   - [ ] Begriffe für Einsteiger erklärt
 
 ## Related Docs
+
+------------
+
+------------
+
+------------
 
 - Verwandte Dokumente
 
 ## 4) Schreibregeln
+
+----------------
+
+----------------
+
+----------------
 
 1. Kurze, klare Sätze
 2. Konkrete Schritte vor Theorie
@@ -93,23 +190,60 @@ B --> C[Ergebnis]
 
 ## 5) CMH-spezifische Zusatzabschnitte
 
+-----------------------------------
+
+-----------------------------------
+
+-----------------------------------
+
 Wenn passend, ergänzen:
 
 - **Function**
-- **Trigger**
-- **Diagram**
-- **Ops Notes**
+   - **Trigger**
+   - **Diagram**
+   - **Ops Notes**
 
 ## 6) Startvorlage
 
+---------------
+
+---------------
+
+---------------
+
 ```markdown
+
 # Titel
+
+=====
+
+=====
+
+=====
 
 ## Overview
 
+--------
+
+--------
+
+--------
+
 ## Prerequisites
 
+-------------
+
+-------------
+
+-------------
+
 ## At a glance
+
+-----------
+
+-----------
+
+-----------
 
 | Punkt | Inhalt |
 |---|---|
@@ -121,29 +255,72 @@ Wenn passend, ergänzen:
 
 ## Trigger & Flow
 
+--------------
+
+--------------
+
+--------------
+
 ```mermaid
 flowchart LR
 A[Trigger] --> B[Service] --> C[Ergebnis]
-```
+```text
 
-## Example
+## [Template] Example
 
-## Events / Properties / API
+------------------
+
+------------------
+
+------------------
+
+## [Template] Events / Properties / API
+
+------------------------------------
+
+------------------------------------
+
+------------------------------------
 
 | Event/Property | Beschreibung |
 |---|---|
 
-## Schritt-für-Schritt
+## [Template] Schritt-für-Schritt
+
+------------------------------
+
+------------------------------
+
+------------------------------
 
 1.
 2.
 3.
 
-## Troubleshooting
+## [Template] Troubleshooting
 
-## Checkliste
+--------------------------
+
+--------------------------
+
+--------------------------
+
+## [Template] Checkliste
+
+---------------------
+
+---------------------
+
+---------------------
 
 - [ ]
 
-## Related Docs
-```
+## See Also
+
+--------
+
+--------
+
+--------
+
+```text

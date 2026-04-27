@@ -1,8 +1,27 @@
+---
+nav:
+  title: AideWorks Patterns Quickstart
+  position: 410
+
+---
+
 # AideWorks Patterns Quickstart
+
+=============================
+
+=============================
+
+=============================
 
 원본: `aideworks/docs/aideworks-patterns.md`
 
 ## 초급자 체크리스트
+
+---------
+
+---------
+
+---------
 
 1. 파일 구조: `app/`, `module/`, `core/`, `main/` 분리
 2. 모듈 기본: list + detail 페이지 쌍
@@ -12,7 +31,13 @@
 
 ## 핵심 패턴
 
+-----
+
+-----
+
+-----
+
 - Main/Renderer 분리
-- Repository + Criteria 패턴
-- ModuleFactory/SettingsFactory 등록
-- 3-file 컴포넌트 패턴(`index.ts`, `.html`, `.scss`)
+   - Repository + Criteria 패턴
+   - ModuleFactory/SettingsFactory 등록
+   - 3-file 컴포넌트 패턴(`index.ts`, `.html`, `.scss`)
